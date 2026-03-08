@@ -1,18 +1,22 @@
-#ifndef DriverH
-#define DriverH
+#ifndef Driver_H_
+#define Driver_H_
 
 #include<iostream>
-#include "car.h"
+#include<string>
+
+#include "Driver.hpp"
+
+class Car;
+
 using namespace std;
 
 class Driver {
   private:
     string name;
     float balance;
-    Car car;
 
   public:
-    Driver(string name, Car car); 
+    Driver(string name); 
     float pay(float fee);
     string getDriverName();
     float getBalance();

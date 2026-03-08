@@ -1,9 +1,10 @@
 #include<iostream>
-#include "driver.h"
+#include<string>
+#include "Driver.hpp"
 
 using namespace std;
 
-Driver::Driver(string name, Car car): car(car) {
+Driver::Driver(string name) {
   this->name = name;
 };
 
