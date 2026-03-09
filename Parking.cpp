@@ -37,7 +37,26 @@ bool Parking::isParkable() {
 }
 
 Park Parking::parkCar(string licensePlate){
-  // I'll do that later.
+  int randomX = rand() % 51;
+  int randomY = rand() % 51;
+  Park p;
+  p.licensePlate = licensePlate;
+
+  while(1) {
+    for(int i = 0; i<parks.size(); i++) {
+      Park park = parks[i];
+      if (park.location.X == randomX) {
+        randomX = rand() % 51;
+      }
+      if (park.location.Y == randomY) {
+        randomY = rand() % 51;
+      }
+    }
+    break;
+  }
+  p.location.X = randomX;
+  p.location.Y = randomY;
+  return p;
 }
 
 float Parking::getFeePerHour() {

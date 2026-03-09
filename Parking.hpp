@@ -22,7 +22,7 @@ class Parking {
     int carCount;
     float feePerHour;
     Location location; // location of parkinglot
-    vector<Park> park;
+    vector<Park> parks;
 
   public:
     Parking();
